@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load humanize %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog Post</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href={% static 'assets/img/favicon.png' %} rel="icon">
+  <link href={% static 'assets/img/apple-touch-icon.png' %} rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href={% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/animate.css/animate.min.cs' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/icofont/icofont.min.css' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/boxicons/css/boxicons.min.css' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/venobox/venobox.css' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %} rel="stylesheet">
+  <link href={% static 'assets/vendor/aos/aos.css' %} rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href={% static 'assets/css/style.css' %} rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna - v2.1.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="index.html"><span>LAW</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <!--          <li><a href="index.html">Home</a></li>-->
+          <!--          <li><a href="about.html">About Us</a></li>-->
+          <!--          <li><a href="services.html">Services</a></li>-->
+          <!--          <li><a href="portfolio.html">Portfolio</a></li>-->
+          <!--          <li><a href="team.html">Team</a></li>-->
+          <li class="active"><a href="/blog">Blog</a></li>
+          <!--          <li class="drop-down"><a href="">Drop Down</a>-->
+          <!--            <ul>-->
+          <!--              <li><a href="#">Drop Down 1</a></li>-->
+          <!--              <li class="drop-down"><a href="#">Drop Down 2</a>-->
+          <!--                <ul>-->
+          <!--                  <li><a href="#">Deep Drop Down 1</a></li>-->
+          <!--                  <li><a href="#">Deep Drop Down 2</a></li>-->
+          <!--                  <li><a href="#">Deep Drop Down 3</a></li>-->
+          <!--                  <li><a href="#">Deep Drop Down 4</a></li>-->
+          <!--                  <li><a href="#">Deep Drop Down 5</a></li>-->
+          <!--                </ul>-->
+          <!--              </li>-->
+          <!--              <li><a href="#">Drop Down 3</a></li>-->
+          <!--              <li><a href="#">Drop Down 4</a></li>-->
+          <!--              <li><a href="#">Drop Down 5</a></li>-->
+          <!--            </ul>-->
+          <!--          </li>-->
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+
+
+    <!-- ======= Blog Section ======= -->
+    <section class="blog" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+              <div class="entry-img">
+                <img src="assets/img/blog-post-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">{{post.title}}</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a
+                      href="blog-single.html">{{post.author}}</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a
+                      href="blog-single.html"><time datetime="2020-01-01">{{post.timeStamp | naturaltime}}</time></a></li>
+                    <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="blog-single.html">{{post.views}} views</a></li>
+                  
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  {{post.content |safe}}
+                </p>
+
+              </div>
+
+              <div class="entry-footer clearfix">
+                <div class="float-left">
+                  <i class="icofont-folder"></i>
+                  <ul class="cats">
+                    <li><a href="#">Business</a></li>
+                  </ul>
+
+                  <i class="icofont-tags"></i>
+                  <ul class="tags">
+                    <li><a href="#">Creative</a></li>
+                    <li><a href="#">Tips</a></li>
+                    <li><a href="#">Marketing</a></li>
+                  </ul>
+                </div>
+
+                <div class="float-right share">
+                  <a href="" title="Share on Twitter"><i class="icofont-twitter"></i></a>
+                  <a href="" title="Share on Facebook"><i class="icofont-facebook"></i></a>
+                  <a href="" title="Share on Instagram"><i class="icofont-instagram"></i></a>
+                </div>
+
+              </div>
+
+            </article><!-- End blog entry -->
+
+            
+            <div class="blog-comments">
+
+              <h5 class="comments-count">{{comments.count}} Comments</h5>
+
+
+            {% for comment in comments %}
+              <div id="comment-2" class="comment clearfix">
+                <img
+                  src="https://previews.123rf.com/images/triken/triken1608/triken160800028/61320729-male-avatar-profile-picture-default-user-avatar-guest-avatar-simply-human-head-vector-illustration-i.jpg"
+                  class="comment-img  float-left" alt="">
+                <h5><a href="">{{comment.user.username}}</a> 
+                <time datetime="2020-01-01">{{comment.timestamp | naturaltime}}</time>
+                <p>
+                  {{comment.comment}}
+                </p>
+                <p>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#replyBox{{commnt.sno}}" role="button" aria-expanded="false" aria-controls="replyBox{{commnt.sno}}e"><i class="icofont-reply"></i>
+                    Reply
+                  </a>
+ 
+            </p>
+                <div class="collapse" id="replyBox{{commnt.sno}}">
+                  <div class="card card-body">
+                    <form action="/blog/postComment" method="post">
+                  {% csrf_token %}
+
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                </div>
+                <input type="hidden" name="parentSno" value="{{comment.sno}}">
+              </div>
+              <button type="submit" class="btn btn-primary">Post Reply</button>
+              </form>
+                  </div>
+                </div>  
+                
+
+              </div><!-- End comment #2-->
+
+            {% endfor %}
+
+
+
+
+
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                  {% if user.is_authenticated %} 
+                                  
+                <form action="/blog/postComment" method="post">
+                  {% csrf_token %}
+
+              </div>
+              <div class="row">
+                <div class="col form-group">
+                  <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                </div>
+                <input type="hidden" name="postSno" value="{{post.sno}}">
+                <input type="hidden" name="parentSno" value="">
+              </div>
+              <button type="submit" class="btn btn-primary">Post Comment</button>
+              </form>
+
+                  {% else %}
+                    <p>Please Login to post a comment</p>   
+                 {% endif %}
+            </div>
+
+          </div><!-- End blog comments -->
+
+        </div><!-- End blog entries list -->
+
+        
+
+      </div><!-- End row -->
+
+      </div><!-- End container -->
+
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+
+
+   
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src={% static 'assets/vendor/jquery/jquery.min.js' %}></script>
+  <script src={% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}></script>
+  <script src={% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}></script>
+  <script src={% static 'assets/vendor/php-email-form/validate.js' %}></script>
+  <script src={% static 'assets/vendor/venobox/venobox.min.js' %}></script>
+  <script src={% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}></script>
+  <script src={% static 'assets/vendor/counterup/counterup.min.js' %}></script>
+  <script src={% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}></script>
+  <script src={% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}></script>
+  <script src={% static 'assets/vendor/aos/aos.js' %}></script>
+
+  <!-- Template Main JS File -->
+  <script src={% static 'assets/js/main.js' %}></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
